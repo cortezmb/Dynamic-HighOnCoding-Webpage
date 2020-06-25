@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    
+}
+
+.colHt{
+    height: 25vh;
+}
+
+.list{
+    text-align: center;
+    list-style-type:none;
+    
+}
+
+.list1{
+    list-style-type:none;
+    
+}
+
+.orange{
+    background-color: orange;
+}
+
+.blue{
+    color: blue;
+}
+
+
+
+.lightGray{
+    background-color: lightgrey;
+}
+
