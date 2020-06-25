@@ -5,11 +5,10 @@ var bodyMain = document.querySelectorAll('body');
 
 //Child element of body <div id ="container">
 var divContainer = document.createElement('div');
-    divContainer.id = "Container";
+    divContainer.setAttribute('class','container-fluid')
+    divContainer.id = "Container-fluid";
 
     bodyMain[0].appendChild(divContainer);
-
-    console.log(divContainer);
 
 //**Beginning of first row**
 
@@ -18,8 +17,7 @@ var myContainer = document.getElementById('Container')
 
 //New div element <div class="row w-100 ">
 var newDivElement = document.createElement('div');
-    // newDivElement.classList = 'row w-100';
-    newDivElement.id = "row w-100";
+    newDivElement.setAttribute('class', 'row w-100');
 
     myContainer.appendChild(newDivElement);
 
@@ -28,9 +26,8 @@ var myRow = document.getElementById('row w-100');
 
 //New div element <div class ="col list colHt bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-between p-5 text-white">
 var newDivElement2 = document.createElement('div');
-    // newDivElement2.setAttribute (class: col list colHt bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-between p-5 text-white);
-    newDivElement2.id = "col list colHt bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-between p-5 text-white"
-
+    newDivElement2.setAttribute('class', 'col list colHt bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-between p-5 text-white');
+    
     myRow.appendChild(newDivElement2);
 
 //Parent of new list <div id = ""></div>
@@ -68,7 +65,7 @@ var myList3 = document.createElement('li');
 
 //Child of list item #3 <h1>Categories</h1>
 var newHeaderElement3 = document.createElement('h2');
-    newHeaderElement3.id = "font-weight-lighter";
+    newHeaderElement3.setAttribute('class', 'font-weight-lighter');
     newHeaderElement3.textContent = 'Categories';
 
     myHeader1[0].appendChild(newHeaderElement3);
@@ -78,8 +75,8 @@ var newHeaderElement3 = document.createElement('h2');
 
 //New div element <div class="row ht-auto w-100">
 var newDivElement2 = document.createElement('div');
-    // newDivElement.classList = 'row w-100';
-    newDivElement2.id = "row ht-auto w-100";
+    newDivElement2.setAttribute('class', 'row w-100');
+
 
     myContainer.appendChild(newDivElement2);
 
@@ -88,8 +85,7 @@ var myRow2 = document.getElementById('row ht-auto w-100');
 
 //New div element <div class ="col-11 offset-1 colHt lightGray">
 var newDivElement3 = document.createElement('div');
-    // newDivElement2.setAttribute (class: col list colHt bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-between p-5 text-white);
-    newDivElement3.id = "col-11 offset-1 colHt lightGray"
+    newDivElement3.setAttribute ('class', 'col list colHt bg-primary d-flex flex-wrap align-items-center justify-content-center justify-content-between p-5 text-white');
 
     myRow2.appendChild(newDivElement3);
 
@@ -99,7 +95,7 @@ var myDiv2 = document.getElementById('col-11 offset-1 colHt lightGray');
 //New Row 2 h1 item <h1></h1>
 var myList2 = document.createElement('h1');
     myList2.textContent = 'Curse of the Current Reviews';
-    myList2.id = 'text-dark';
+    myList2.setAttribute('class','text-dark');
     myDiv2.appendChild(myList2);
 
 var paragraphRow2 = document.createElement('p');
@@ -111,27 +107,26 @@ var paragraphRow2 = document.createElement('p');
 
 //New div element <div class="row ht-25 w-100">
 var newDivElement4 = document.createElement('div');
-    // newDivElement.classList = 'row ht-25 w-100';
-    newDivElement4.id = "row ht-25 w-100";
-
+    newDivElement4.setAttribute('class','row ht-25 w-100');
+ 
     myContainer.appendChild(newDivElement4);
 
 //Parent of Row 3 new div
-var myRow3 = document.getElementById('row ht-25 w-100');
+var myRow3 = document.getElementById('row ht-25 w-100 colht');
 
 //New div element <div class ="col-11 offset-1 colHt bg-light">
 var newDivElement5 = document.createElement('div');
-    newDivElement5.id = "col-11 offset-1 colHt bg-light"
+    newDivElement5.setAttribute('class', 'col-11 offset-1 colHt bg-light');
 
     myRow3.appendChild(newDivElement5);
 
 //Parent of h3 <div id = ""></div>
-var myDiv3 = document.getElementById('col-11 offset-1 colHt bg-light', [0]);
+var myDiv3 = document.getElementById('col-11 offset-1 colHt bg-light');
 
 //New Row 3 h3 item <h3></h3>
 var myList3 = document.createElement('h3');
     myList3.textContent = 'Hello WatchKit';
-    myList3.id = 'blue';
+    myList3.setAttribute('class','blue');
     myDiv3.appendChild(myList3);
 
 var paragraphRow3 = document.createElement('p');
@@ -139,9 +134,9 @@ var paragraphRow3 = document.createElement('p');
     myDiv3.appendChild(paragraphRow3);
 
 var mychildDiv3 = document.createElement('div');
-    mychildDiv3.id = "col orange text-white list1 d-flex align-items-center p-3"
+    mychildDiv3.setAttribute('class', 'row bg-info orange');
 
-    myRow3.appendChild(mychildDiv3);
+    myDiv3.appendChild(mychildDiv3);
 
 //New Row 3 list Item #1 <li></li>
 var myList1Row3 = document.createElement('li');
@@ -156,21 +151,21 @@ var myList2Row3 = document.createElement('li');
 
 //**Beginning of fourth row**
 
-var myRow4 = document.getElementById('row ht-25 w-100',[1]);
+// var myRow4 = document.getElementById('row ht-25 w-100',[1]);
+var myContainer = document.getElementById('Container')
 
 //New div element <div class ="row ht-25 w-100">
 var newDivElement6 = document.createElement('div');
-    newDivElement6.id = "row ht-25 w-100"
+    newDivElement6.setAttribute('class', 'row ht-25 w-100');
 
     myContainer.appendChild(newDivElement6);
 
 //Parent of Row 4 new div
-var myRow4 = document.getElementById('row ht-25 w-100', [1]);
+var myRow4 = document.getElementById('row ht-25 w-100');
 
 //New div element <div class ="col-11 offset-1 colHt bg-light">
 var newDivElement7 = document.createElement('div');
-    // newDivElement2.setAttribute (class: col-11 offset-1 colHt bg-light);
-    newDivElement7.id = "col-11 offset-1 colHt bg-light"
+    newDivElement7.setAttribute ('class', 'col-11 offset-1 colHt bg-light');
 
     myRow4.appendChild(newDivElement7);
 
@@ -180,7 +175,7 @@ var myDiv4 = document.getElementById('col-11 offset-1 colHt bg-light', [1]);
 //New Row 4 h3 item <h3></h3>
 var myList4 = document.createElement('h3');
     myList4.textContent = 'Introduction to Swift';
-    myList4.id = 'blue';
+    myList4.id = 'blue');
     myDiv4.appendChild(myList4);
 
 var paragraphRow4 = document.createElement('p');
